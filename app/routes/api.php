@@ -21,6 +21,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::get('/Attrs', [AttrController::class, 'index']);
 Route::get('/Attrs/{name}', [AttrController::class, 'byName']);
+Route::get('/Attrs/file/2', [AttrController::class, 'byFile']);
 Route::get('/Meta/', [MetaController::class, 'index']);
 Route::get('/Meta/{service}', [MetaController::class, 'byService']);
 Route::get('/Meta/name/{name}', [MetaController::class, 'byName']);
+Route::get('/Meta/file/2', [MetaController::class, 'fromFile']);

@@ -14,7 +14,12 @@ class AttrController extends Controller
     }
 
     public function byName($name) {
-      $attrss = Attribute::where('Name', $name)->get();
+
+      $attrss = Attribute::where('ServiceID', $name)->get();
       return response()->json($attrss);
+    }
+
+    public function byFile() {
+
     }
 }

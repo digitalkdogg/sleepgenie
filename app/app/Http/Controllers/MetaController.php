@@ -24,4 +24,9 @@ class MetaController extends Controller
         $metas = Meta::where('serviceID', $service)->get();
         return response()->json($metas);
     }
+
+    public function fromFile() {
+      $json = [json_decode('{"id":1,"Name":"Score","serviceID":2},{"id":4,"Name":"Resting Heart Rate","serviceID":2},{"id":5,"Name":"Body Battery","serviceID":2},{"id":6,"Name":"Respiration","serviceID":2},{"id":7,"Name":"Quality","serviceID":2},{"id":8,"Name":"Duration","serviceID":2},{"id":9,"Name":"Bedtime","serviceID":2},{"id":16,"Name":"Wake Time","serviceID":2}')];
+      return response()->json($json);
+    }
 }
