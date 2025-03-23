@@ -1,14 +1,15 @@
-import Image from "next/image";
-import Link from "next/link";
-import ProductCard from './components/ProductCard'
+import TopBar from './components/TopBar'
+import LeftTrix from './components/LeftTrix'
+import RightTrix from './components/RightTrix'
 
 export default function Home() {
   return (
     <main>
-      <h1>hello world!!</h1>
-      
-      <Link href = "/users">Users</Link>
-      <ProductCard />
+      <TopBar />
+      <div id = "body" className = "flex justify-content-center">
+        <LeftTrix />
+        <RightTrix />
+      </div>
     </main>
   );
 }
